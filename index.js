@@ -12,7 +12,7 @@ module.exports = function(filename, content, callback) {
   if (extensions.indexOf(path.extname(filename)) > -1) {
     var b = browserify();
     b.add(filename);
-    b.transform('coffeeify');
+    b.transform('coffeeify', {debug: true});
     b.bundle({}, function(e, src){
       if (e) {
         callback(e, filename, content);
