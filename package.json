@@ -1,0 +1,29 @@
+{
+  "name": "vulcanize-browserify",
+  "version": "0.0.0",
+  "description": "Preprocessing module for vulcanize to browserify your javascript",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/wballard/vulcanize-browserify.git"
+  },
+  "keywords": [
+    "polymer",
+    "vulcanize",
+    "browserify",
+    "coffeescript"
+  ],
+  "author": "Will Ballard <wballard@mailframe.net>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wballard/vulcanize-browserify/issues"
+  },
+  "homepage": "https://github.com/wballard/vulcanize-browserify",
+  "dependencies": {
+    "coffeeify": "~0.6.0",
+    "browserify": "~4.1.8"
+  }
+}
