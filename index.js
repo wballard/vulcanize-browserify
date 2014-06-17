@@ -9,7 +9,10 @@ var browserify = require('browserify');
 
 module.exports = function(filename, content, callback) {
   var extensions = ['.js', '.coffee', '.litcoffee'];
-  if (extensions.indexOf(path.extname(filename)) > -1) {
+  var skip = ['platform.js', 'polymer.js'];
+  if (skip.indexOf(path.basename(filename)) > -1) {
+    callback(undefined, filename, content);
+  } else if (extensions.indexOf(path.extname(filename)) > -1) {
     var b = browserify();
     b.add(filename);
     b.transform('coffeeify', {debug: true});
